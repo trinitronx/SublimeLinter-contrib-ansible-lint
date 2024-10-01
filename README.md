@@ -40,6 +40,26 @@ The settings can be found under:
 Sublime Text -> Preferences -> Package Settings -> ApplySyntax -> Settings - User
 ```
 
+**Note:** The configuration syntax/schema for ApplySyntax plugin has changed in versions `>= 4.0`.
+
+For ApplySyntax versions `>= 4.0`:
+
+```
+    "syntaxes": [{
+        "syntax": "Ansible/Ansible",
+        "rules": [
+          {"file_path": ".*/tasks/.*\\.yml$"},
+          {"file_path": ".*/handler/.*\\.yml$"},
+          {"file_path": ".*/(.*_)?vars/.*\\.yml$"},
+          {"file_path": ".*/roles/.*\\.yml$"},
+          {"file_path": ".*/.*ansible.*/.*\\.yml$"},
+          {"file_path": ".*/playbooks/(.*/)?.*\\.yml$"}
+        ]
+      }]
+```
+
+For ApplySyntax versions `< 4.0`:
+
 ```
     "syntaxes": [{
         "name": "Ansible/Ansible",
